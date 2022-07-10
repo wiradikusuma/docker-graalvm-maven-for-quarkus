@@ -23,9 +23,9 @@ on:
     # https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/
 
 env:
-  DOCKER_IMAGE_REPO: vegardit/graalvm-maven
+  DOCKER_IMAGE_REPO: wiradikusuma/graalvm-maven-for-quarkus
   TRIVY_CACHE_DIR: ~/.trivy/cache
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -114,4 +114,3 @@ jobs:
       run: |
         bash example/tools/run-in-docker.sh mvn clean package
         bash example/tools/run-in-docker.sh bash -c target/example
-        

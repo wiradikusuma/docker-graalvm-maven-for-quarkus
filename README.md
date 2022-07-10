@@ -2,8 +2,8 @@
 
 [![Build Status](https://github.com/vegardit/docker-graalvm-maven/workflows/Build/badge.svg "GitHub Actions")](https://github.com/vegardit/docker-graalvm-maven/actions?query=workflow%3ABuild)
 [![License](https://img.shields.io/github/license/vegardit/docker-graalvm-maven.svg?label=license)](#license)
-[![Docker Pulls](https://img.shields.io/docker/pulls/vegardit/graalvm-maven.svg)](https://hub.docker.com/r/vegardit/graalvm-maven)
-[![Docker Stars](https://img.shields.io/docker/stars/vegardit/graalvm-maven.svg)](https://hub.docker.com/r/vegardit/graalvm-maven)
+[![Docker Pulls](https://img.shields.io/docker/pulls/wiradikusuma/graalvm-maven-for-quarkus.svg)](https://hub.docker.com/r/wiradikusuma/graalvm-maven-for-quarkus)
+[![Docker Stars](https://img.shields.io/docker/stars/wiradikusuma/graalvm-maven-for-quarkus.svg)](https://hub.docker.com/r/wiradikusuma/graalvm-maven-for-quarkus)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 1. [What is it?](#what-is-it)
@@ -39,7 +39,7 @@ To build a Maven project located on your local workstation with via this docker 
     $ docker run --rm -it \
       -v $PWD:/mnt/myproject:rw \
       -w /mnt/myproject \
-      vegardit/graalvm-maven:latest-java17 \
+      wiradikusuma/graalvm-maven-for-quarkus:latest-java17 \
       mvn clean package
     ```
 
@@ -49,7 +49,7 @@ To build a Maven project located on your local workstation with via this docker 
     C:\Users\MyUser\myproject> docker run --rm -it ^
       -v /c/Users/MyUser/myproject:/mnt/myproject:rw ^
       -w /mnt/myproject ^
-      vegardit/graalvm-maven:latest-java17 ^
+      wiradikusuma/graalvm-maven-for-quarkus:latest-java17 ^
       mvn clean package
     ```
 
@@ -66,7 +66,7 @@ You can use a custom Maven [settings.xml](https://maven.apache.org/settings.html
       -v /path/to/my/settings.xml:/root/.m2/settings.xml:ro \
       -v $PWD:/mnt/myproject:rw \
       -w /mnt/myproject \
-      vegardit/graalvm-maven:latest-java17 \
+      wiradikusuma/graalvm-maven-for-quarkus:latest-java17 \
       mvn clean package
 ```
 
@@ -82,7 +82,7 @@ $ cd ~/myproject
 $ docker run --rm -it \
   -v /var/run/docker.sock:/var/run/docker.sock:rw \
   -v $PWD:/mnt/myproject:rw \
-  vegardit/graalvm-maven:latest-java17 \
+  wiradikusuma/graalvm-maven-for-quarkus:latest-java17 \
   docker run --rm hello-world
 ```
 
@@ -97,7 +97,7 @@ You can a local folder to `/root/.m2/repository` to cache the downloaded artifac
       -v /path/to/my/local/repository:/root/.m2/repository:rw \
       -v $PWD:/mnt/myproject:rw \
       -w /mnt/myproject \
-      vegardit/graalvm-maven:latest-java17 \
+      wiradikusuma/graalvm-maven-for-quarkus:latest-java17 \
       mvn clean package
 ```
 
