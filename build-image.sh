@@ -28,10 +28,10 @@ image_name=$image_repo:$image_tag
 # determine GraalVM download URL
 #################################################
 case $graalvm_version in \
-   latest) graalvm_version=$(curl -sS https://api.github.com/repos/graalvm/graalvm-ce-builds/releases/latest | grep "tag_name" | cut -d'"' -f4 | cut -d'-' -f2) ;& \
+   latest) graalvm_version=$(curl -sS https://api.github.com/repos/graalvm/mandrel/releases/latest | grep "tag_name" | cut -d'"' -f4 | cut -d'-' -f2)-Final ;& \
    dev)    graalvm_version=$(curl -sS https://api.github.com/repos/graalvm/graalvm-ce-dev-builds/releases/latest | grep "tag_name" | cut -d'"' -f4) ;& \
    *dev*)  graalvm_url="https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/${graalvm_version}/graalvm-ce-java${java_major_version}-linux-amd64-dev.tar.gz" ;; \
-   *)      graalvm_url="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-${graalvm_version}/graalvm-ce-java${java_major_version}-linux-amd64-${graalvm_version}.tar.gz" ;; \
+   *)      graalvm_url="https://github.com/graalvm/mandrel/releases/download/mandrel-${graalvm_version}/mandrel-java${java_major_version}-linux-amd64-${graalvm_version}.tar.gz" ;; \
 esac
 echo "Effective GRAALVM_VERSION: $graalvm_version"
 
