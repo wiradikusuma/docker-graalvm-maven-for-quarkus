@@ -29,24 +29,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.experimental }}
 
     strategy:
       fail-fast: false
       matrix:
         include:
-        - GRAALVM_VERSION: latest
+        - GRAALVM_VERSION: 22.1.0.0-Final
           GRAALVM_JAVA_VERSION: 11
-          experimental: false
-        - GRAALVM_VERSION: latest
+        - GRAALVM_VERSION: 22.1.0.0-Final
           GRAALVM_JAVA_VERSION: 17
-          experimental: false
-        - GRAALVM_VERSION: dev
-          GRAALVM_JAVA_VERSION: 11
-          experimental: true
-        - GRAALVM_VERSION: dev
-          GRAALVM_JAVA_VERSION: 17
-          experimental: true
 
     steps:
     - name: Git Checkout
