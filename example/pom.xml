@@ -13,7 +13,7 @@
       <maven.compiler.target>17</maven.compiler.target>
 
       <!-- https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk -->
-      <graalvm.version>22.3.0</graalvm.version>
+      <graalvm.version>21.2.0</graalvm.version>
 
       <mainClass>example.Main</mainClass>
    </properties>
