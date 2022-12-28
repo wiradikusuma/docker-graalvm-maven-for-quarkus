@@ -29,7 +29,7 @@ if "%1"=="/?" (
 )
 
 if [%RUN_IN_DOCKER_IMAGE%]==[] (
-  set RUN_IN_DOCKER_IMAGE=wiradikusuma/graalvm-maven-for-quarkus:latest-java11
+  set RUN_IN_DOCKER_IMAGE=wiradikusuma/graalvm-maven-for-quarkus:latest-java17
 )
 
 setlocal enabledelayedexpansion

@@ -23,7 +23,7 @@ The image comes pre-installed with latest releases of:
 - [bash-funk](https://github.com/vegardit/bash-funk) Bash toolbox with adaptive Bash prompt
 - [Docker CE](https://download.docker.com/linux/debian/dists/bullseye/pool/stable/amd64/) command line client
 - [git](https://packages.debian.org/de/git) command line client
-- [GraalVM Java 11 or 17](https://www.graalvm.org/downloads/) with [native-image](https://www.graalvm.org/reference-manual/native-image/) extension.
+- [GraalVM Java 17](https://www.graalvm.org/downloads/) with [native-image](https://www.graalvm.org/reference-manual/native-image/) extension.
 - [upx](https://upx.github.io/) executable packer
 
 

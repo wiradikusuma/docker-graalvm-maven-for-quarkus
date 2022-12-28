@@ -17,7 +17,7 @@ source "$shared_lib/lib/build-image-init.sh"
 # specify target docker registry/repo
 #################################################
 graalvm_version=${GRAALVM_VERSION:-latest}
-java_major_version=${GRAALVM_JAVA_VERSION:-11}
+java_major_version=${GRAALVM_JAVA_VERSION:-17}
 docker_registry=${DOCKER_REGISTRY:-docker.io}
 image_repo=${DOCKER_IMAGE_REPO:-wiradikusuma/graalvm-maven-for-quarkus}
 image_tag=${DOCKER_IMAGE_TAG:-$graalvm_version-java$java_major_version}
