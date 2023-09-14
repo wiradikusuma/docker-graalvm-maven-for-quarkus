@@ -34,7 +34,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - GRAALVM_VERSION: 22.3.0.1-Final
+        - GRAALVM_VERSION: 23.0.1.2-Final
           GRAALVM_JAVA_VERSION: 17
 
     steps:
